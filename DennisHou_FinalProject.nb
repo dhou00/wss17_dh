@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    391451,       7235]
-NotebookOptionsPosition[     73351,       1779]
-NotebookOutlinePosition[    386185,       7114]
-CellTagsIndexPosition[    385889,       7102]
+NotebookDataLength[    392089,       7255]
+NotebookOptionsPosition[     73856,       1795]
+NotebookOutlinePosition[    386688,       7130]
+CellTagsIndexPosition[    386392,       7118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1121,8 +1121,8 @@ Cell[BoxData[
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Input",
  CellChangeTimes->{{3.7082647715313945`*^9, 
-  3.7082647849258394`*^9}},ExpressionUUID->"996fc9da-db44-4ec4-8200-\
-3af8260dfdc2"],
+  3.7082647849258394`*^9}},ExpressionUUID->"ac4333e7-cc4a-4d75-b0ef-\
+98c4b53ffdd4"],
 
 Cell[BoxData[
  GraphicsBox[{
@@ -1350,8 +1350,8 @@ Cell[BoxData[
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Input",
  CellChangeTimes->{{3.708264785880495*^9, 
-  3.7082647867601542`*^9}},ExpressionUUID->"e5850b53-73ff-4159-820e-\
-aa4959271538"]
+  3.7082647867601542`*^9}},ExpressionUUID->"6da6aae3-83d9-4dd9-8804-\
+1a44bdbb3ecb"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -1573,14 +1573,30 @@ Cell[TextData[{
 }], "Item",
  CellChangeTimes->{{3.7080963065367527`*^9, 3.708096309577277*^9}, {
   3.7082740574858274`*^9, 
-  3.708274080125064*^9}},ExpressionUUID->"66883a1c-6bbf-428e-84bc-\
-a7c0ba375299"]
+  3.708274080125064*^9}},ExpressionUUID->"cb0b0d4e-e6c0-4cbd-a553-\
+483db30ecdbd"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Written Content / Lesson Plans", "TemplateSubsection",
  CellChangeTimes->{{3.708096199547399*^9, 
   3.708096214681534*^9}},ExpressionUUID->"a55786c3-e7a6-4cf3-bb54-\
 b05532239df1"],
+
+Cell[TextData[{
+ "Link to the GitHub: ",
+ ButtonBox["https://wolfr.am/mVY2i63Z",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://wolfr.am/mVY2i63Z"], None},
+  ButtonNote->"https://wolfr.am/mVY2i63Z"]
+}], "Item",
+ CellChangeTimes->{{3.7080963065367527`*^9, 3.708096309577277*^9}, {
+  3.7082740574858274`*^9, 3.708274080125064*^9}, {3.708275426512046*^9, 
+  3.708275434166978*^9}},ExpressionUUID->"42d9d930-b9c2-41fd-9b72-\
+ea036a1a8272"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1591,7 +1607,7 @@ Cell["Conclusions in Detail", "TemplateSubsection",
 65d46bf0f9c2"],
 
 Cell["\<\
-Fewer than 2 % of axioms are \"interesting\" in the sense of only being \
+Fewer than 2% of axioms are \"interesting\" in the sense of only being \
 satisfied by a relatively small number of operator tables. In the cases \
 studied so far, there is a definite blowup for the number of axioms satisfied \
 by exactly some fixed number of tables. Heuristically, this smallness is \
@@ -1606,9 +1622,9 @@ possible multiplication tables.\
    3.708263104979297*^9, 3.7082631368811398`*^9}, {3.70826353394236*^9, 
    3.7082636120045547`*^9}, {3.7082636595066376`*^9, 
    3.7082637988097577`*^9}, {3.7082639315612745`*^9, 3.7082639912346215`*^9}, 
-   3.708264988963248*^9, 3.708273887206625*^9},
+   3.708264988963248*^9, 3.708273887206625*^9, 3.708275382712672*^9},
  FormatType->
-  "TextForm",ExpressionUUID->"fd0a5352-da74-411c-b7d4-1041c39c7eee"]
+  "TextForm",ExpressionUUID->"88c469b5-b6df-41e0-b330-6563cb273479"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1778,7 +1794,7 @@ ed733929beeb"]
 }, Open  ]]
 },
 WindowSize->{1520, 803},
-WindowMargins->{{61, Automatic}, {-154, Automatic}},
+WindowMargins->{{56, Automatic}, {-4, Automatic}},
 Magnification:>1.15 Inherited,
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
 StyleDefinitions->Notebook[{
@@ -7068,22 +7084,22 @@ CellTagsIndex->{
    342ae088-468d-4001-915a-8697f06388de",
    CellTags->"Author"]},
  "DataSources"->{
-  Cell[67961, 1635, 257, 4, 
+  Cell[68466, 1651, 257, 4, 
   83, "TemplateSubsection", "ExpressionUUID" -> "689b877b-06d6-4ead-bee4-
    c57b528bde5b",
    CellTags->"DataSources"]},
  "FutureDirections"->{
-  Cell[68243, 1643, 276, 4, 
+  Cell[68748, 1659, 276, 4, 
   70, "TemplateSubsection", "ExpressionUUID" -> "
    5a16b971-8846-49cb-8ef1-51341a06ce28",
    CellTags->"FutureDirections"]},
  "Keywords"->{
-  Cell[70657, 1698, 182, 2, 
+  Cell[71162, 1714, 182, 2, 
   83, "TemplateSubsection", "ExpressionUUID" -> "05f5377c-594a-4e4d-
    b343-1ae69d192dc1",
    CellTags->"Keywords"]},
  "LastModifiedDate"->{
-  Cell[72171, 1742, 232, 7, 
+  Cell[72676, 1758, 232, 7, 
   32, "LastModified", "ExpressionUUID" -> "6d317e64-
    d23c-43da-9b58-7d9e4c143098",
    CellTags->"LastModifiedDate"]},
@@ -7093,7 +7109,7 @@ CellTagsIndex->{
    edd5af543d22",
    CellTags->"Mentor"]},
  "References"->{
-  Cell[69420, 1668, 313, 5, 
+  Cell[69925, 1684, 313, 5, 
   83, "TemplateSubsection", "ExpressionUUID" -> "cec472f0-52dc-43fa-
    bac2-6a79df97b4c9",
    CellTags->"References"]}
@@ -7101,14 +7117,14 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Affiliation", 384564, 7059},
- {"Author", 384722, 7064},
- {"DataSources", 384880, 7069},
- {"FutureDirections", 385054, 7074},
- {"Keywords", 385225, 7079},
- {"LastModifiedDate", 385396, 7084},
- {"Mentor", 385559, 7089},
- {"References", 385716, 7094}
+ {"Affiliation", 385067, 7075},
+ {"Author", 385225, 7080},
+ {"DataSources", 385383, 7085},
+ {"FutureDirections", 385557, 7090},
+ {"Keywords", 385728, 7095},
+ {"LastModifiedDate", 385899, 7100},
+ {"Mentor", 386062, 7105},
+ {"References", 386219, 7110}
  }
 *)
 (*NotebookFileOutline
@@ -7127,7 +7143,7 @@ Cell[2123, 51, 505, 7, 33, "TemplateTagItem", "ExpressionUUID" -> \
 "08e53507-af0f-4ab7-9604-54bfd8b851fb",
  CellTags->"Affiliation"]
 }, Open  ]],
-Cell[2643, 61, 94, 0, 1, "TemplateSubsectionDelimiter", "ExpressionUUID" -> \
+Cell[2643, 61, 94, 0, 4, "TemplateSubsectionDelimiter", "ExpressionUUID" -> \
 "17d27eda-7ecf-4f60-94a3-c513f3f44220"],
 Cell[CellGroupData[{
 Cell[2762, 65, 231, 4, 86, "TemplateSection", "ExpressionUUID" -> \
@@ -7179,61 +7195,65 @@ Cell[64975, 1560, 183, 3, 83, "TemplateSubsection", "ExpressionUUID" -> \
 Cell[65161, 1565, 401, 11, 33, "Item", "ExpressionUUID" -> \
 "cb0b0d4e-e6c0-4cbd-a553-483db30ecdbd"]
 }, Open  ]],
-Cell[65577, 1579, 186, 3, 83, "TemplateSubsection", "ExpressionUUID" -> \
-"5aca7b1f-5db0-46dd-ad05-1553a7299525"],
 Cell[CellGroupData[{
-Cell[65788, 1586, 249, 4, 70, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[65599, 1581, 186, 3, 83, "TemplateSubsection", "ExpressionUUID" -> \
+"5aca7b1f-5db0-46dd-ad05-1553a7299525"],
+Cell[65788, 1586, 447, 11, 33, "Item", "ExpressionUUID" -> \
+"42d9d930-b9c2-41fd-9b72-ea036a1a8272"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66272, 1602, 249, 4, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "31aef25e-6145-4872-ba7f-ac5ebf92e25b"],
-Cell[66040, 1592, 1142, 18, 54, "Input", "ExpressionUUID" -> \
+Cell[66524, 1608, 1163, 18, 54, "Input", "ExpressionUUID" -> \
 "88c469b5-b6df-41e0-b330-6563cb273479"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[67219, 1615, 275, 4, 83, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[67724, 1631, 275, 4, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "550cc563-d985-4585-b115-4521342574fc"],
-Cell[67497, 1621, 449, 11, 33, "Item", "ExpressionUUID" -> \
+Cell[68002, 1637, 449, 11, 33, "Item", "ExpressionUUID" -> \
 "da2764a9-2a08-4909-a86e-617c4833b56c"]
 }, Open  ]],
-Cell[67961, 1635, 257, 4, 83, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[68466, 1651, 257, 4, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "689b877b-06d6-4ead-bee4-c57b528bde5b",
  CellTags->"DataSources"],
 Cell[CellGroupData[{
-Cell[68243, 1643, 276, 4, 70, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[68748, 1659, 276, 4, 70, "TemplateSubsection", "ExpressionUUID" -> \
 "5a16b971-8846-49cb-8ef1-51341a06ce28",
  CellTags->"FutureDirections"],
-Cell[68522, 1649, 861, 14, 77, "Text", "ExpressionUUID" -> \
+Cell[69027, 1665, 861, 14, 77, "Text", "ExpressionUUID" -> \
 "8335728b-7c00-4183-9d50-a32b40f2a70c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69420, 1668, 313, 5, 83, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[69925, 1684, 313, 5, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "cec472f0-52dc-43fa-bac2-6a79df97b4c9",
  CellTags->"References"],
-Cell[69736, 1675, 884, 18, 36, "Input", "ExpressionUUID" -> \
+Cell[70241, 1691, 884, 18, 36, "Input", "ExpressionUUID" -> \
 "e0c8fa76-27a4-4ec6-a1f2-e787cb326018"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70657, 1698, 182, 2, 83, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[71162, 1714, 182, 2, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "05f5377c-594a-4e4d-b343-1ae69d192dc1",
  CellTags->"Keywords"],
-Cell[70842, 1702, 230, 4, 34, "TemplateComment", "ExpressionUUID" -> \
+Cell[71347, 1718, 230, 4, 34, "TemplateComment", "ExpressionUUID" -> \
 "62fb8909-e5d9-4249-96c6-0c8de4eed39c"],
 Cell[CellGroupData[{
-Cell[71097, 1710, 255, 4, 33, "Item", "ExpressionUUID" -> \
+Cell[71602, 1726, 255, 4, 33, "Item", "ExpressionUUID" -> \
 "30ff478d-685f-44c8-9d51-0b314b1fb6a6"],
-Cell[71355, 1716, 214, 4, 33, "Item", "ExpressionUUID" -> \
+Cell[71860, 1732, 214, 4, 33, "Item", "ExpressionUUID" -> \
 "678c1b22-ce17-41bc-bada-7f0de30388cd"],
-Cell[71572, 1722, 222, 4, 33, "Item", "ExpressionUUID" -> \
+Cell[72077, 1738, 222, 4, 33, "Item", "ExpressionUUID" -> \
 "046c051c-b483-4fa6-9853-2e5438bcb124"]
 }, Open  ]]
 }, Open  ]],
-Cell[71821, 1730, 160, 3, 83, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[72326, 1746, 160, 3, 83, "TemplateSubsection", "ExpressionUUID" -> \
 "feacd472-2d7a-4733-a0a6-e16443c9f4a5"],
 Cell[CellGroupData[{
-Cell[72006, 1737, 162, 3, 70, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[72511, 1753, 162, 3, 70, "TemplateSubsection", "ExpressionUUID" -> \
 "c384f4bb-fd15-4509-89c8-a26cc136aee9"],
-Cell[72171, 1742, 232, 7, 32, "LastModified", "ExpressionUUID" -> \
+Cell[72676, 1758, 232, 7, 32, "LastModified", "ExpressionUUID" -> \
 "6d317e64-d23c-43da-9b58-7d9e4c143098",
  CellTags->"LastModifiedDate"],
-Cell[72406, 1751, 917, 24, 48, "Input", "ExpressionUUID" -> \
+Cell[72911, 1767, 917, 24, 48, "Input", "ExpressionUUID" -> \
 "01ccf828-73e6-4d0c-a66c-c977027ba7c5"]
 }, Open  ]]
 }, Open  ]]
