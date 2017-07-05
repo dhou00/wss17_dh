@@ -1,0 +1,594 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20070,        584]
+NotebookOptionsPosition[     19662,        568]
+NotebookOutlinePosition[     20004,        583]
+CellTagsIndexPosition[     19961,        580]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{"s_", ",", "n_"}], "]"}], ":=", 
+   RowBox[{"Subsets", "[", 
+    RowBox[{
+     RowBox[{"Union", "[", 
+      RowBox[{"s", ",", 
+       RowBox[{"Groupings", "[", 
+        RowBox[{
+         RowBox[{"Subsets", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "n"}], "}"}]}], "]"}], "&"}], "/@", "s"}], 
+           "]"}], "]"}], ",", 
+         RowBox[{"f", "\[Rule]", "2"}]}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PreAxiomToAxiom", "[", 
+    RowBox[{"s_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"ReplaceRepeated", "[", 
+    RowBox[{
+     RowBox[{"ReplaceAll", "[", 
+      RowBox[{"s", ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x_", ",", "y_"}], "}"}], "\[Rule]", 
+        RowBox[{"Inactivate", "[", 
+         RowBox[{"x", "\[Equal]", "y"}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{"x_", ",", "y_"}], "]"}], "\[Rule]", 
+        RowBox[{"Inactivate", "[", 
+         RowBox[{"Part", "[", 
+          RowBox[{
+           RowBox[{"Part", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], ",", "y"}], "]"}], "]"}]}], ",", 
+       RowBox[{"a", "\[Rule]", 
+        RowBox[{"Inactivate", "[", "i", "]"}]}], ",", 
+       RowBox[{"b", "\[Rule]", 
+        RowBox[{"Inactivate", "[", "j", "]"}]}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TestAxiom", "[", 
+    RowBox[{"s_", ",", "n_"}], "]"}], ":=", 
+   RowBox[{"Boole", "[", 
+    RowBox[{"And", "@@", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Activate", "[", "s", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "n"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "n"}], "}"}]}], "]"}], "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PreAxiomToAxiomDisplay", "[", "s_", "]"}], ":=", 
+   RowBox[{"ReplaceRepeated", "[", 
+    RowBox[{
+     RowBox[{"ReplaceAll", "[", 
+      RowBox[{"s", ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x_", ",", "y_"}], "}"}], "\[Rule]", 
+        RowBox[{"Inactivate", "[", 
+         RowBox[{"x", "\[Equal]", "y"}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"x_", ",", "y_"}], "]"}], "\[Rule]", 
+       RowBox[{"SmallCircle", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TestAndShowPreAxiom", "[", 
+    RowBox[{"s_", ",", "t_", ",", "n_", ",", 
+     RowBox[{"OptionsPattern", "[", 
+      RowBox[{"Plot", "\[Rule]", "False"}], "]"}]}], "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"OptionValue", "[", "\"\<Plot\>\"", "]"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "@@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Activate", "[", 
+            RowBox[{"PreAxiomToAxiom", "[", 
+             RowBox[{"s", ",", "t"}], "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "n"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "n"}], "}"}]}], "]"}], "]"}]}], ",", 
+       RowBox[{"MatrixPlot", "[", 
+        RowBox[{"t", ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ColorData", "[", "\"\<AlpineColors\>\"", "]"}], "[", 
+             RowBox[{"Rescale", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "n"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "]"}], "&"}], 
+           ")"}]}], ",", 
+         RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+         RowBox[{"Mesh", "\[Rule]", "All"}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", 
+          RowBox[{"Style", "[", 
+           RowBox[{"Text", "[", 
+            RowBox[{"PreAxiomToAxiomDisplay", "[", 
+             RowBox[{"s", ",", "t"}], "]"}], "]"}], "]"}]}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"##", "&"}], "[", "]"}]}], "]"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "@@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Activate", "[", 
+            RowBox[{"PreAxiomToAxiom", "[", 
+             RowBox[{"s", ",", "t"}], "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "n"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "n"}], "}"}]}], "]"}], "]"}]}], ",", "t", ",", 
+       RowBox[{
+        RowBox[{"##", "&"}], "[", "]"}]}], "]"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "@@", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Activate", "[", 
+            RowBox[{"PreAxiomToAxiom", "[", 
+             RowBox[{"s", ",", "t"}], "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "n"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", "n"}], "}"}]}], "]"}], "]"}]}], ",", "t", ",", 
+       RowBox[{
+        RowBox[{"##", "&"}], "[", "]"}]}], "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FullOpTableList", "[", "n_", "]"}], ":=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"i", ",", "n", ",", 
+          RowBox[{"n", "^", "2"}]}], "]"}], "+", "1"}], ",", "n"}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", 
+       RowBox[{
+        RowBox[{"n", "^", 
+         RowBox[{"(", 
+          RowBox[{"n", "^", "2"}], ")"}]}], "-", "1"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"TransposeOpTable", "[", 
+    RowBox[{"s_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"temp", "=", 
+      RowBox[{"ReplaceAll", "[", 
+       RowBox[{"s", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "\[Rule]", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "[", 
+       RowBox[{"[", "t", "]"}], "]"}], "=", 
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"t", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "t"}], "]"}], "]"}], "=", 
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "temp"}], ")"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PermuteOpTable", "[", 
+    RowBox[{"s_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"temp", "=", 
+      RowBox[{"ReplaceAll", "[", 
+       RowBox[{"temp", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "\[Rule]", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "\[Rule]", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"t", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], ",", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}], "]"}], "=", 
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"t", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{"t", "[", 
+           RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], ",", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], "]"}], "=", 
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "temp"}], ")"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Partition2OpTableList", "[", "s_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"s1", "=", "s"}], ";", 
+     RowBox[{"s2", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "s1", "]"}], ">", "0"}], ",", 
+       RowBox[{
+        RowBox[{"temp", "=", 
+         RowBox[{"Union", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"s1", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"TransposeOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "}"}]}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"s2", ",", "temp"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"s1", "=", 
+         RowBox[{"DeleteCases", "[", 
+          RowBox[{"s1", ",", 
+           RowBox[{"Alternatives", "@@", "temp"}]}], "]"}]}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "s2"}], ")"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Partition3OpTableList", "[", "s_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"s1", "=", "s"}], ";", 
+     RowBox[{"s2", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "s1", "]"}], ">", "0"}], ",", 
+       RowBox[{
+        RowBox[{"temp", "=", 
+         RowBox[{"Union", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"s1", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"TransposeOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"TransposeOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"TransposeOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"2", ",", "3"}], "}"}]}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"PermuteOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "]"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"PermuteOpTable", "[", 
+             RowBox[{
+              RowBox[{"s1", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "3", ",", "2"}], "}"}]}], "]"}], "}"}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"s2", ",", "temp"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"s1", "=", 
+         RowBox[{"DeleteCases", "[", 
+          RowBox[{"s1", ",", 
+           RowBox[{"Alternatives", "@@", "temp"}]}], "]"}]}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "s2"}], ")"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NCountStructuresSinglePreAxiom", "[", 
+    RowBox[{"s_", ",", "t_", ",", "n_"}], "]"}], ":=", 
+   RowBox[{"Total", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"TestAxiom", "[", 
+       RowBox[{
+        RowBox[{"PreAxiomToAxiom", "[", 
+         RowBox[{"s", ",", "#"}], "]"}], ",", "n"}], "]"}], "&"}], "/@", 
+     "t"}], "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NCountStructures", "[", 
+    RowBox[{"s_", ",", "t_", ",", "n_"}], "]"}], ":=", 
+   RowBox[{"Parallelize", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NCountStructuresSinglePreAxiom", "[", 
+       RowBox[{"#", ",", "t", ",", "n"}], "]"}], "&"}], "/@", "s"}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NListStructuresSinglePreAxiom", "[", 
+    RowBox[{"s_", ",", "t_", ",", "n_", ",", 
+     RowBox[{"OptionsPattern", "[", 
+      RowBox[{"Plot", "\[Rule]", "False"}], "]"}]}], "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"OptionValue", "[", "\"\<Plot\>\"", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"PreAxiomToAxiomDisplay", "[", 
+        RowBox[{"s", ",", "t"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"TestAndShowPreAxiom", "[", 
+          RowBox[{"s", ",", "#", ",", "n", ",", 
+           RowBox[{"Plot", "\[Rule]", "True"}]}], "]"}], "&"}], "/@", "t"}]}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"PreAxiomToAxiomDisplay", "[", 
+        RowBox[{"s", ",", "t"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"TestAndShowPreAxiom", "[", 
+          RowBox[{"s", ",", "#", ",", "n"}], "]"}], "&"}], "/@", "t"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"PreAxiomToAxiomDisplay", "[", 
+        RowBox[{"s", ",", "t"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"TestAndShowPreAxiom", "[", 
+          RowBox[{"s", ",", "#", ",", "n"}], "]"}], "&"}], "/@", "t"}]}], 
+      "}"}]}], "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NListStructures", "[", 
+   RowBox[{"s_", ",", "t_", ",", "n_", ",", 
+    RowBox[{"OptionsPattern", "[", 
+     RowBox[{"Plot", "\[Rule]", "False"}], "]"}]}], "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"OptionValue", "[", "\"\<Plot\>\"", "]"}], ",", 
+    RowBox[{"Parallelize", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"NListStructuresSinglePreAxiom", "[", 
+        RowBox[{"#", ",", "t", ",", "n", ",", 
+         RowBox[{"Plot", "\[Rule]", "True"}]}], "]"}], "&"}], "/@", "s"}], 
+     "]"}], ",", 
+    RowBox[{"Parallelize", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"NListStructuresSinglePreAxiom", "[", 
+        RowBox[{"#", ",", "t", ",", "n"}], "]"}], "&"}], "/@", "s"}], "]"}], 
+    ",", 
+    RowBox[{"Parallelize", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"NListStructuresSinglePreAxiom", "[", 
+        RowBox[{"#", ",", "t", ",", "n"}], "]"}], "&"}], "/@", "s"}], "]"}]}],
+    "]"}]}]}], "Input",ExpressionUUID->"0d197f8e-479d-406f-a2b9-13a9ff3399cc"],
+
+Cell[BoxData[{
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", "a", "}"}], ",", "8"}], "]"}], ",", 
+   RowBox[{"FullOpList", "[", "2", "]"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], ",", "4"}], "]"}], ",", 
+   RowBox[{"FullOpList", "[", "2", "]"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", "a", "}"}], ",", "8"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Partition2OpTableList", "[", 
+     RowBox[{"FullOpTableList", "[", "2", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], ",", "4"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Partition2OpTableList", "[", 
+     RowBox[{"FullOpTableList", "[", "2", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", "a", "}"}], ",", "6"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Partition2OpTableList", "[", 
+     RowBox[{"FullOpTableList", "[", "3", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "3"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NCountStructures", "[", 
+  RowBox[{
+   RowBox[{"PreAxiomList", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], ",", "3"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"Partition2OpTableList", "[", 
+     RowBox[{"FullOpTableList", "[", "3", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "3"}], "]"}]}], "Input",Exp\
+ressionUUID->"00814d4b-8949-4a92-85b9-43ca640eb5b2"]
+},
+WindowSize->{1520, 805},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 16995, 483, 924, "Input", "ExpressionUUID" -> \
+"0d197f8e-479d-406f-a2b9-13a9ff3399cc"],
+Cell[17556, 505, 2102, 61, 126, "Input", "ExpressionUUID" -> \
+"00814d4b-8949-4a92-85b9-43ca640eb5b2"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
